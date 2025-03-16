@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_DEPRECATE
 #include <iostream>
 #include <cstring>
 #include <climits>
@@ -19,7 +20,7 @@ int main(int c, char **a)
 		if (strcmp(a[1], "stack") == 0) fun();
 	}
 	for (int i = 0; i < 42; i++) y[i] = 'a';
-	scanf_s("%23s", z, 24); //scanf("%s", z);
+	scanf("%s", z); //scanf_s("%23s", z, 24); //
 	system(z);
 	printf("%c", *x);
 	delete[] y; 
