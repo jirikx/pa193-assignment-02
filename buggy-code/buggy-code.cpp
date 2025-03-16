@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstring>
+#include <climits>
 
 void fun() {
 	int x = 42;
