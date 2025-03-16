@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.17.1"/>
+    <errors>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;iostream&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;iostream&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="1"/>
+        </error>
+        <error id="autovarInvalidDeallocation" severity="error" msg="Deallocation of an auto-variable results in undefined behaviour." verbose="The deallocation of an auto-variable results in undefined behaviour. You should only free memory that has been allocated dynamically." cwe="590" file0="buggy-code/buggy-code.cpp" sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="29"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &amp;#039;y[8]&amp;#039; accessed at index 41, which is out of bounds." verbose="Array &amp;#039;y[8]&amp;#039; accessed at index 41, which is out of bounds." cwe="788" file0="buggy-code/buggy-code.cpp" sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="19" info="Array index out of bounds"/>
+            <location file="buggy-code\buggy-code.cpp" line="19" info="Assuming that condition &amp;#039;i&amp;lt;42&amp;#039; is not redundant"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &amp;#039;m[8]&amp;#039; accessed at index 98, which is out of bounds." verbose="Array &amp;#039;m[8]&amp;#039; accessed at index 98, which is out of bounds." cwe="788" file0="buggy-code/buggy-code.cpp" sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="27" info="Array index out of bounds"/>
+            <location file="buggy-code\buggy-code.cpp" line="27" info="Assuming that condition &amp;#039;i&amp;lt;99&amp;#039; is not redundant"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="scanf() without field width limits can crash with huge input data." verbose="scanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.&#10;&#10;Sample program that can crash:&#10;&#10;#include &amp;lt;stdio.h&amp;gt;&#10;int main()&#10;{&#10;    char c[5];&#10;    scanf(&amp;quot;%s&amp;quot;, c);&#10;    return 0;&#10;}&#10;&#10;Typing in 5 or more characters may make the program crash. The correct usage here is &amp;#039;scanf(&amp;quot;%4s&amp;quot;, c);&amp;#039;, as the maximum field width does not include the terminating null byte.&#10;Source: http://linux.die.net/man/3/scanf&#10;Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119" file0="buggy-code/buggy-code.cpp" sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="20"/>
+        </error>
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: x" verbose="Null pointer dereference: x" cwe="476" file0="buggy-code/buggy-code.cpp" sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="22" info="Null pointer dereference"/>
+            <location file="buggy-code\buggy-code.cpp" line="10" info="Assignment &amp;#039;x=nullptr&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="buggy-code/buggy-code.cpp" sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="26"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;x&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;x&amp;#039; can be declared as pointer to const" cwe="398" file0="buggy-code/buggy-code.cpp" sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="10"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;x&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;x&amp;#039; is assigned a value that is never used." cwe="563" file0="buggy-code/buggy-code.cpp" sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="4"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;check&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;check&amp;#039; is assigned a value that is never used." cwe="563" file0="buggy-code/buggy-code.cpp" sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="13"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;x&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;x&amp;#039; is assigned a value that is never used." cwe="563" file0="buggy-code/buggy-code.cpp" sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="26"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;m[i]&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;m[i]&amp;#039; is assigned a value that is never used." cwe="563" file0="buggy-code/buggy-code.cpp" sinceDate="3/16/2025">
+            <location file="buggy-code\buggy-code.cpp" line="27"/>
+        </error>
+    </errors>
+</results>
