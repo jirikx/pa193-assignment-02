@@ -1,0 +1,7 @@
+[16.03.2025]
+1742150386162
+cppcheck-error:3
+cppcheck-warning:0
+cppcheck-style:5
+cppcheck-performance:0
+cppcheck-portability:0

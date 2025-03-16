@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="1938670803159471400">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="1" column="0"/>
+        </error>
+        <error id="autovarInvalidDeallocation" severity="error" msg="Deallocation of an auto-variable results in undefined behaviour." verbose="The deallocation of an auto-variable results in undefined behaviour. You should only free memory that has been allocated dynamically." cwe="590" file0="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="29" column="8" info="Deallocating memory that was not dynamically allocated"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;y[8]&apos; accessed at index 41, which is out of bounds." verbose="Array &apos;y[8]&apos; accessed at index 41, which is out of bounds." cwe="788" file0="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="19" column="32" info="Array index out of bounds"/>
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="19" column="20" info="Assuming that condition &apos;i&lt;42&apos; is not redundant"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;m[8]&apos; accessed at index 98, which is out of bounds." verbose="Array &apos;m[8]&apos; accessed at index 98, which is out of bounds." cwe="788" file0="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="27" column="42" info="Array index out of bounds"/>
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="27" column="31" info="Assuming that condition &apos;i&lt;99&apos; is not redundant"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="scanf() without field width limits can crash with huge input data." verbose="scanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119" file0="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="20" column="2"/>
+        </error>
+        <error id="nullPointer" severity="error" msg="Null pointer dereference: x" verbose="Null pointer dereference: x" cwe="476" file0="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="22" column="16" info="Null pointer dereference"/>
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="10" column="12" info="Assignment &apos;x=nullptr&apos;, assigned value is 0"/>
+            <symbol>x</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="26" column="4"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;x&apos; can be declared as pointer to const" verbose="Variable &apos;x&apos; can be declared as pointer to const" cwe="398" file0="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="10" column="8" info="Variable &apos;x&apos; can be declared as pointer to const"/>
+            <symbol>x</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;x&apos; is assigned a value that is never used." verbose="Variable &apos;x&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="4" column="8"/>
+            <symbol>x</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;check&apos; is assigned a value that is never used." verbose="Variable &apos;check&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="13" column="13"/>
+            <symbol>check</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;x&apos; is assigned a value that is never used." verbose="Variable &apos;x&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="26" column="3"/>
+            <symbol>x</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;m[i]&apos; is assigned a value that is never used." verbose="Variable &apos;m[i]&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp">
+            <location file="C:\Users\vboxuser\source\repos\pa193-assignment-02\buggy-code\buggy-code.cpp" line="27" column="46"/>
+            <symbol>m[i]</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp" functionName="fun" lineNumber="3"/>
+    <functiondecl file="C:/Users/vboxuser/source/repos/pa193-assignment-02/buggy-code/buggy-code.cpp" functionName="main" lineNumber="8"/>
+    <functioncall functionName="exit"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="fun"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="scanf"/>
+    <functioncall functionName="strcmp"/>
+    <functioncall functionName="system"/>
+  </FileInfo>
+</analyzerinfo>

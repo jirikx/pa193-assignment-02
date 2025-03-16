@@ -1,0 +1,2 @@
+fun call:[fun] noreturn:[fun]
+main call:[exit,free,fun,malloc,printf,scanf,strcmp,system] noreturn:[exit,free,fun]
